@@ -23,8 +23,8 @@ export const AppDataSource = new DataSource({
 });
 
 export const connectTypeORM = () => {
-	if (!MysqlDataSource.isInitialized) {
-		return MysqlDataSource.initialize((err) => {
+	if (!AppDataSource.isInitialized) {
+		return AppDataSource.initialize((err) => {
 			if (!err)
 				console.log(
 					'TypeORM MYSQL Connection Established Successfully'
